@@ -50,7 +50,7 @@ Crie uma função com as seguintes características:
 
 function somar (num1, num2, num3){
 	if(num1 === undefined || num2 === undefined || num3 === undefined){
-		console.log('Preencha todos os valores corretamente!');
+		return 'Preencha todos os valores corretamente!';
 	} else{
 		return num1 * num2 * num3 + 2;
 	}
@@ -85,16 +85,8 @@ Crie uma função com as seguintes características:
 function somado (num1, num2, num3){
 	if (num1 !== undefined && num2 === undefined && num3 === undefined){
 		return num1;
-	} else if(num1 === undefined && num2 !== undefined && num3 === undefined){
-		return num2;
-	} else if(num1 === undefined && num2 === undefined && num3 !== undefined){
-		return num3;
 	} else if (num1 !== undefined && num2 !== undefined && num3 === undefined){
 		return num1+num2;
-	} else if(num1 !== undefined && num2 === undefined && num3 !== undefined){
-		return num1+num3;
-	} else if(num1 === undefined && num2 !== undefined && num3 !== undefined){
-		return num2+num3;
 	} else if(num1 !== undefined && num2 !== undefined && num3 !== undefined){
 		return (num1+num2)/num3;
 	} else if(num1 === undefined && num2 === undefined && num3 === undefined){
