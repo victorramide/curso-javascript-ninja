@@ -120,7 +120,7 @@ carro.adicionarPessoas = function adicionarPessoas(numero){
 		return 'O carro já está lotado!';
 	}else if(numero + carro.quantidadePessoas > carro.assentos){
 		var pessoa = 'pessoas';
-		if(5-carro.quantidadePessoas===1){
+		if(carro.assentos-carro.quantidadePessoas===1){
 			pessoa = 'pessoa';
 		}
 		return 'Só cabem mais '+(5-carro.quantidadePessoas)+' '+pessoa+'!';
