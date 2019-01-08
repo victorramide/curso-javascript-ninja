@@ -53,14 +53,14 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 */
 
 var carro = {
-marca:'Ford',
-modelo: 'KA',
-placa: 'AAA-2525',
-ano: 2013,
-cor: 'Branca',
-quantasPortas: 4,
-assentos: 5,
-quantidadePessoas: 0
+  marca:'Ford',
+  modelo: 'KA',
+  placa: 'AAA-2525',
+  ano: 2013,
+  cor: 'Branca',
+  quantasPortas: 4,
+  assentos: 5,
+  quantidadePessoas: 0
 };
 
 /*
