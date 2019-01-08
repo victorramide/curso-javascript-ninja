@@ -12,6 +12,12 @@ var isTrushy = function tipos(tip){
 	return tip ? 'true' : 'false';
 };
 
+OU
+var isTrushy = function tipos(tip){ 
+	return !!tip;
+};
+
+
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTrushy(0);
 isTrushy(-0);
