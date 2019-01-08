@@ -10,7 +10,7 @@ para o contrário.
 
 var isTrushy = function tipos(tip){ 
 	return tip ? 'true' : 'false';
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTrushy(0);
