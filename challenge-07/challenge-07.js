@@ -1,7 +1,7 @@
 /*
 Crie um array com 5 items (tipos variados).
 */
-var myarr = [2, null, undefined, 'amazon', 1.25];
+var myarr = [2, null, undefined, 'amazon', false];
 
 /*
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
