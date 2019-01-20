@@ -13,7 +13,8 @@ Invoque a função criada acima, passando dois números que serão somados, e mo
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
-console.log('A soma de '+2+' e '+2+' é igual a '+sum(2,2)+'.');//A soma de 2 e 2 é igual a 4.
+var value1 = 10, value2=10;
+console.log('A soma de '+value1+' e '+value2+' é igual a '+sum(value1,value2)+'.');//A soma de 10 e 10 é igual a 20.
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
@@ -26,20 +27,20 @@ Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 function showName(){
-return showName.name;
+  return 'Victor Ramide';
 }
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = showName();
+var varShowName = showName;
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-console.log('A função '+varShowName.name+' retorna '+varShowName+'.'); //A função undefined retorna showName.
+console.log('A função '+varShowName.name+' retorna '+varShowName()+'.'); //A função showName retorna Victor Ramide.
 
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
@@ -53,10 +54,10 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-var calculator = function calculator(arg){
+function calculator(arg){
 
 	return function func2(arg1, arg2){
-		var result = 0;
+		var result;
 		if(arg === '+'){
 			result = arg1+arg2;
 		}else if(arg === '-'){
@@ -65,14 +66,14 @@ var calculator = function calculator(arg){
 			result = arg1*arg2;
 		}else if(arg === '/'){
 			result = arg1/arg2;
-		}else if(arg === '%'){
+		}else if(arg === '%'){ 
 			result = arg1%arg2;
 		}else{
 			return 'Operação inválida.';
 		}
 
 		return 'Resultado da operação: '+arg1+' '+arg+' '+arg2+' = '+result+'.'
-	}
+	};
 }
 
 /*
@@ -84,7 +85,7 @@ var sum = calculator('+');
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-sum(5,5); //Resultado da operação: 5 + 5 = 10.
+console.log(sum(5,5)); //Resultado da operação: 5 + 5 = 10.
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
