@@ -91,8 +91,10 @@ Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
 `division` e `mod`, e atribua à elas `calculator`, passando números
 diferentes para cada chamada.
 */
-// ?
-
+var subtraction = calculator(15,8);
+var multiplication = calculator(20,2);
+var division = calculator(25,5);
+var mod = calculator(4,3);
 /*
 Mostre as variáveis acima no `console` (uma chamada de console por variável),
 criando a função de `callback` que faz o cálculo para subração, multiplicação,
@@ -101,13 +103,25 @@ As suas respostas devem estar abaixo dos `console.log` referentes à cada
 chamada.
 */
 console.log( 'O resultado da subtração é:' );
-// ?
+
+subtraction(function(num1,num2){
+    return console.log('O resultado da subtração é: '+(num1-num2));
+});
 
 console.log( 'O resultado da multiplicação é:' );
-// ?
+
+multiplication(function(num1,num2){
+    return console.log('O resultado da multiplicação é: '+(num1*num2));
+});
 
 console.log( 'O resultado da divisão é:' );
-// ?
+
+division(function(num1,num2){
+    return console.log('O resultado da divisão é: '+(num1/num2));
+});
 
 console.log( 'O resto da divisão é:' );
-// ?
+
+mod(function(num1,num2){
+    return console.log('O resultado do mod é: '+(num1%num2));
+});
