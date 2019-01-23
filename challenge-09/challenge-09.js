@@ -61,12 +61,16 @@ por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
 que foram passadas para a primeira função `calculator`.
 */
 // ?
-
+function calculator(num1, num2){
+  return function (callback){
+    return callback(num1, num2);
+  }
+}
 /*
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
 */
-// ?
+var sum = calculator(10,2);
 
 /*
 Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -77,8 +81,10 @@ para a chamada à `calculator` acima.
 uma função anônima que irá retornar a soma dos dois números que essa função
 anônima tem como seus argumentos.
 */
-console.log( 'O resultado da soma é:' );
-// ?
+
+sum(function (num1, num2){
+return console.log( 'O resultado da soma é: '+(num1+num2));
+});
 
 /*
 Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
