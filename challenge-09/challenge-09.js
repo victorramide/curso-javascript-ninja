@@ -68,7 +68,7 @@ function calculator(num1, num2){
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
 */
-var sum = calculator(10,2);
+var sum = calculator(18,2);
 
 /*
 Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -79,10 +79,9 @@ para a chamada à `calculator` acima.
 uma função anônima que irá retornar a soma dos dois números que essa função
 anônima tem como seus argumentos.
 */
-
-sum(function (num1, num2){
-return console.log( 'O resultado da soma é: '+(num1+num2));
-});
+console.log('O resultado da soma é: '+sum(function (number1, number2){
+  return number1 + number2;
+}));
 
 /*
 Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
@@ -100,27 +99,21 @@ divisão e módulo (resto de divisão), conforme a função utilizada.
 As suas respostas devem estar abaixo dos `console.log` referentes à cada
 chamada.
 */
-console.log( 'O resultado da subtração é:' );
+console.log( 'O resultado da subtração é: '+subtraction(function(num1,num2){
+    return num1-num2;
+}));
 
-subtraction(function(num1,num2){
-    return console.log('O resultado da subtração é: '+(num1-num2));
-});
+console.log( 'O resultado da multiplicação é: '+multiplication(function(num1,num2){
+    return num1*num2;
+}));
 
-console.log( 'O resultado da multiplicação é:' );
+console.log( 'O resultado da divisão é: '+division(function(num1,num2){
+    return num1/num2;
+}));
 
-multiplication(function(num1,num2){
-    return console.log('O resultado da multiplicação é: '+(num1*num2));
-});
+console.log( 'O resto da divisão é: '+mod(function(num1,num2){
+    return num1%num2;
+}));
 
-console.log( 'O resultado da divisão é:' );
 
-division(function(num1,num2){
-    return console.log('O resultado da divisão é: '+(num1/num2));
-});
-
-console.log( 'O resto da divisão é:' );
-
-mod(function(num1,num2){
-    return console.log('O resultado do mod é: '+(num1%num2));
-});
 }());
