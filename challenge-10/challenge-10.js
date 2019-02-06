@@ -70,6 +70,20 @@ function calculator(operator){
       }
     }else return isOperatorValid(operator);
   }
+ /*
+  function calculator (operator){
+	if(!isOperatorValid(operator)){
+		return false;
+	}
+	return function(x,y){
+		if(typeof x !== 'number' && typeof y !== 'number'){
+			return false;
+		}
+		return operation [operator](x,y);
+	}
+}
+*/
+
   /*
   Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
   - o operador, o primeiro número e o segundo número. O retorno da função
@@ -126,7 +140,15 @@ function calculator(operator){
   - O segundo, a função de soma, passando os dois operandos.
   - Se "sum" for "false", mostrar no console a mensagem de erro.
   */
-  // ?
+  // 
+  
+  if (sum){
+	  number1 = 10;
+	  number2 = 12;
+	  console.log(showOperationMessage(operationSignal, number1, number2), sum(number1, number2));
+  } else{
+	  console.log(showErrorMessage(operationSignal));
+  }
 
   /*
   Repita desde o "PASSO 2" com as operações de subtração, multiplicação,
