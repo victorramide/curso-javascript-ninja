@@ -24,7 +24,7 @@ para o nome, idade, peso e data de nascimento dessa pessoa.
 	name: 'Victor',
 	age: 26,
 	weight: 70,
-	birthday: '02/10/1992'
+	birthday: '02/10'
 }
 
 /*
@@ -58,7 +58,7 @@ function moreThan(age){
 	return false;
 }
 moreThan(25);
-console.log('The person has more than 25 years old? [TRUE/FALSE]');
+console.log('The person has more than 25 years old? [TRUE/FALSE]', moreThan(25));
 /*
 Faça um loop de 0 a 20, que adicione cada número como um item de um
 array chamado `numbers`. Se o contador for maior que 10, saia do loop.
@@ -83,7 +83,7 @@ Mostrar no console os números do array.
   numbers = [];
 
 for(var cont=0; cont<21;cont++){
-	if(cont % 2 !== 0){
+	if(cont % 2 === 0){
 		continue;
 	}
 	numbers.push(cont);
