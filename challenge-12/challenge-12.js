@@ -1,3 +1,4 @@
+(function(){
 /*
 Envolva todo o conteúdo desse arquivo em uma IIFE.
 */
@@ -11,19 +12,22 @@ Preencha cada propriedade com os seus dados pessoais, respeitando o tipo
 de valor para cada propriedade.
 */
 // ?
-console.log( 'Propriedades de "person":' );
-
+  var person = {
+	name: 'Victor',
+	lastname: 'Ramide',
+	age: 26
+  }
 /*
 Mostre no console, em um array, todas as propriedades do objeto acima.
 Não use nenhuma estrutura de repetição, nem crie o array manualmente.
 */
 // ?
-
+  console.log( 'Propriedades de "person": '+Object.keys(person));
 /*
 Crie um array vazio chamado `books`.
 */
 // ?
-
+var books = [];
 /*
 Adicione nesse array 3 objetos, que serão 3 livros. Cada livro deve ter a
 seguintes propriedades:
@@ -98,3 +102,4 @@ console.log( '\nAgora em ordem alfabética:' );
 Mostre todos os itens do array acima, odenados alfabéticamente.
 */
 // ?
+)()}
