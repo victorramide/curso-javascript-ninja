@@ -35,25 +35,28 @@ seguintes propriedades:
 `pages`: Number
 */
 // ?
-console.log( '\nLista de livros:' );
-
+  books.push({name: 'Submarino amarelo', pages: 480});
+  books.push({name: 'Harry Potter', pages: 702});
+  books.push({name: 'Preacher', pages: 666});
 /*
 Mostre no console todos os livros.
 */
 // ?
+  console.log( '\nLista de livros: '+books[0].name+', '+books[1].name+' e '+books[2].name+'.');
 
-console.log( '\nLivro que está sendo removido:' );
+
 /*
 Remova o último livro, e mostre-o no console.
 */
 // ?
+  console.log( '\nLivro que está sendo removido: '+books.pop().name);
 
-console.log( '\nAgora sobraram somente os livros:' );
+
 /*
 Mostre no console os livros restantes.
 */
 // ?
-
+  console.log( '\nAgora sobraram somente os livros:'+books[0].name+' e '+books[1].name);
 /*
 Converta os objetos que ficaram em `books` para strings.
 */
